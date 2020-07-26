@@ -1,0 +1,1 @@
+terser wc-carousel-lite.js -c -m --mangle-props reserved=[constructor,observedAttributes,disconnectedCallback,attributeChangedCallback,connectedCallback,Customcarousel,play,stop,next,prev,goto,initItem,transitionType,transitionDuration,item,interval,direction,infinite,autoplay,centerBetween,touchVelocityLimit,mouseVelocityLimit,minxShiftRequired] -o wc-carousel-lite.min.js

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script defer src='../dist/wc-carousel-lite.min.js'></script>
+</head>
+
+<script>
+
+  function func_center(index,id) {
+    let karu = document.getElementById(id)
+    karu.goto(index)
+  }
+
+  function func_next(shift,id) {
+    let karu = document.getElementById(id)
+    karu.next(shift)
+  }
+
+  function func_prev(shift,id) {
+    let karu = document.getElementById(id)
+    karu.prev(shift)
+  }
+
+  function func_stop_autoplay(id) {
+    let karu = document.getElementById(id)
+    karu.stop()
+  }
+
+  function func_start_autoplay(id) {
+    let karu = document.getElementById(id)
+    karu.play()
+  }
+
+</script>
+
+<style>
+  body {
+    background-color: gray;
+  }
+
+  wc-carousel-lite, #mittari {
+    width: 100%;
+    margin: auto;
+    height: 200px;
+    background-color: lightgray;
+    display: flex;
+  }
+
+  #karuselli_2 {
+    width: 500px;
+  }
+
+  #karuselli .item {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  #karuselli_2 .item {
+    margin-right: 90px;
+    margin-left: 90px;
+  }
+
+  #karuselli_3 .item {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
+  .mittari {
+    background-color: white;
+    height: 20px;
+  }
+
+  .puolikas {
+    background-color: black;
+    width:50%;
+    height: 20px;
+  }
+
+  .buttons {
+    width: 600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  button {
+    border-radius: 4px;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    box-shadow: 4px 4px 4px lightgrey;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  .space {
+    height: 100px;
+  }
+
+  .number {
+    position: absolute;
+    font-size: 100px;
+    color: lightgreen;
+    margin: 10px;
+    font-weight: bold;
+    opacity: 0.7;
+  }
+
+  #header{
+    padding: 10px 20px;
+    margin:10px auto;
+    margin-bottom: 40px;
+    width:500px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color: white;
+    flex-direction: column;
+    font-family: Arial;
+    box-shadow: 4px 4px 4px lightgrey;
+    font-size: 22px;
+  }
+
+  #description, #footer {
+    width: 650px;
+    padding: 10px 20px;
+    margin:10px auto;
+    font-size: 18px;
+    font-style: italic;
+    font-family: Arial;
+    text-align: center;
+    color:white;
+  }
+
+  .text_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .demotext {
+    font-size: 30px;
+    font-family: Arial;
+    width: 900px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    text-shadow: 2px 2px black;
+  }
+
+</style>
+
+<body>
+
+  <div id="description">
+    wc-carousel-lite web component is available from <a href="https://github.com/vanillawc/wc-carousel-lite" target="_blank">GitHub</a> <!--and <a href="https://www.npmjs.com/package/@vanillawc/wc-carousel-lite" target="_blank">NPM registry</a-->
+  </div>
+  <div id='header'>
+    wc-carousel-lite demo
+  </div>
+  <div class="text_container">
+    <div class="demotext">
+      Infinite carousel with 100% width,<br> with 20px side margins per item:
+    </div>
+  </div>
+  <wc-carousel-lite id="karuselli" init-item=5 transition-duration=1000 infinite>
+    <div class="item" style="width:400px">
+      <div class="number">1</div>
+      <img src="https://placekitten.com/g/400/200">
+    </div>
+    <div class="item" style="width:300px">
+      <div class="number">2</div>
+      <img src="https://placekitten.com/g/300/200">
+    </div>
+    <div class="item" style="width:250px">
+      <div class="number">3</div>
+      <img src="https://placekitten.com/g/250/200">
+    </div>
+    <div class="item" style="width:200px">
+      <div class="number">4</div>
+      <img src="https://placekitten.com/g/200/200">
+    </div>
+    <div class="item" style="width:350px">
+      <div class="number">5</div>
+      <img src="https://placekitten.com/g/350/200">
+    </div>
+    <div class="item" style="width:150px">
+      <div class="number">6</div>
+      <img src="https://placekitten.com/g/150/200">
+    </div>
+    <div class="item" style="width:170px">
+      <div class="number">7</div>
+      <img src="https://placekitten.com/g/170/200">
+    </div>
+    <div class="item" style="width:420px">
+      <div class="number">8</div>
+      <img src="https://placekitten.com/g/420/200">
+    </div>
+    <div class="item" style="width:290px">
+      <div class="number">9</div>
+      <a href="127.0.0.1" target="_blank">
+        <img src="https://placekitten.com/g/290/200">
+      </a>
+    </div>
+    <div class="item" style="width:320px">
+      <div class="number">10</div>
+      <img src="https://placekitten.com/g/320/200">
+    </div>
+
+  </wc-carousel-lite>
+  <div class="mittari">
+    <div class="puolikas">
+    </div>
+  </div>
+
+<div class="buttons">
+  <button onclick="func_prev(3,'karuselli')" class="button" type="button">Prev(3)</button>
+  <button onclick="func_prev(1,'karuselli')" class="button" type="button">Prev</button>
+  <button onclick="func_start_autoplay('karuselli')" class="button" type="button">Start autoplay</button>
+  <button onclick="func_stop_autoplay('karuselli')" class="button" type="button">Stop autoplay</button>
+  <button onclick="func_next(1,'karuselli')" class="button" type="button">Next</button>
+  <button onclick="func_next(3,'karuselli')" class="button" type="button">Next(3)</button>
+</div>
+<div class="buttons">
+  <button onclick="func_center(0,'karuselli')" class="button" type="button">Go to 1</button>
+  <button onclick="func_center(1,'karuselli')" class="button" type="button">Go to 2</button>
+  <button onclick="func_center(2,'karuselli')" class="button" type="button">Go to 3</button>
+  <button onclick="func_center(3,'karuselli')" class="button" type="button">Go to 4</button>
+  <button onclick="func_center(4,'karuselli')" class="button" type="button">Go to 5</button>
+</div>
+<div class="buttons">
+  <button onclick="func_center(5,'karuselli')" class="button" type="button">Go to 6</button>
+  <button onclick="func_center(6,'karuselli')" class="button" type="button">Go to 7</button>
+  <button onclick="func_center(7,'karuselli')" class="button" type="button">Go to 8</button>
+  <button onclick="func_center(8,'karuselli')" class="button" type="button">Go to 9</button>
+  <button onclick="func_center(9,'karuselli')" class="button" type="button">Go to 10</button>
+</div>
+
+  <div class="space"></div>
+
+  <div class="text_container">
+    <div class="demotext">
+      Infinite carousel with 500px width,<br> with 90px side margins per item:
+    </div>
+  </div>
+  <wc-carousel-lite id="karuselli_2" init-item=4 transition-duration=1000 infinite>
+    <div class="item">
+      <div class="number">1</div>
+      <img src="https://placekitten.com/g/400/200">
+    </div>
+    <div class="item">
+      <div class="number">2</div>
+      <img src="https://placekitten.com/g/300/200">
+    </div>
+    <div class="item">
+      <div class="number">3</div>
+      <img src="https://placekitten.com/g/250/200">
+    </div>
+    <div class="item">
+      <div class="number">4</div>
+      <img src="https://placekitten.com/g/200/200">
+    </div>
+    <div class="item">
+      <div class="number">5</div>
+      <img src="https://placekitten.com/g/350/200">
+    </div>
+    <div class="item">
+      <div class="number">6</div>
+      <img src="https://placekitten.com/g/150/200">
+    </div>
+    <div class="item">
+      <div class="number">7</div>
+      <img src="https://placekitten.com/g/170/200">
+    </div>
+    <div class="item">
+      <div class="number">8</div>
+      <img src="https://placekitten.com/g/420/200">
+    </div>
+    <div class="item">
+      <div class="number">9</div>
+      <a href="127.0.0.1" target="_blank">
+        <img src="https://placekitten.com/g/290/200">
+      </a>
+    </div>
+    <div class="item">
+      <div class="number">10</div>
+      <img src="https://placekitten.com/g/320/200">
+    </div>
+  </wc-carousel-lite>
+  <div class="mittari">
+    <div class="puolikas">
+    </div>
+  </div>
+
+<div class="buttons">
+  <button onclick="func_prev(1,'karuselli_2')" class="button" type="button">Prev</button>
+  <button onclick="func_start_autoplay('karuselli_2')" class="button" type="button">Start autoplay</button>
+  <button onclick="func_stop_autoplay('karuselli_2')" class="button" type="button">Stop autoplay</button>
+  <button onclick="func_next(1,'karuselli_2')" class="button" type="button">Next</button>
+</div>
+
+  <div class="space"></div>
+
+  <div class="text_container">
+    <div class="demotext">
+      Between centered non-infinite carousel with 100% width,<br> with 40px side margins per item:
+    </div>
+  </div>
+
+  <wc-carousel-lite id="karuselli_3" init-item=4 transition-duration=1000 center-between>
+    <div class="item">
+      <div class="number">1</div>
+      <img src="https://placekitten.com/g/400/200">
+    </div>
+    <div class="item">
+      <div class="number">2</div>
+      <img src="https://placekitten.com/g/300/200">
+    </div>
+    <div class="item">
+      <div class="number">3</div>
+      <img src="https://placekitten.com/g/250/200">
+    </div>
+    <div class="item">
+      <div class="number">4</div>
+      <img src="https://placekitten.com/g/200/200">
+    </div>
+    <div class="item">
+      <div class="number">5</div>
+      <img src="https://placekitten.com/g/350/200">
+    </div>
+    <div class="item">
+      <div class="number">6</div>
+      <img src="https://placekitten.com/g/150/200">
+    </div>
+    <div class="item">
+      <div class="number">7</div>
+      <img src="https://placekitten.com/g/170/200">
+    </div>
+    <div class="item">
+      <div class="number">8</div>
+      <img src="https://placekitten.com/g/420/200">
+    </div>
+    <div class="item">
+      <div class="number">9</div>
+      <a href="127.0.0.1" target="_blank">
+        <img src="https://placekitten.com/g/290/200">
+      </a>
+    </div>
+    <div class="item">
+      <div class="number">10</div>
+      <img src="https://placekitten.com/g/320/200">
+    </div>
+  </wc-carousel-lite>
+  <div class="mittari">
+    <div class="puolikas">
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button onclick="func_prev(1,'karuselli_3')" class="button" type="button">Prev</button>
+    <button onclick="func_start_autoplay('karuselli_3')" class="button" type="button">Start autoplay</button>
+    <button onclick="func_stop_autoplay('karuselli_3')" class="button" type="button">Stop autoplay</button>
+    <button onclick="func_next(1,'karuselli_3')" class="button" type="button">Next</button>
+  </div>
+
+  <div class="space"></div>
+
+  <div class="text_container">
+    <div class="demotext">
+      Non-infinite carousel with 100% width,<br>using images as items directly,<br> with 0px side margins per item:
+    </div>
+  </div>
+
+  <wc-carousel-lite id="karuselli_4" init-item=4 transition-duration=1000 item="slide">
+      <img src="https://placekitten.com/g/400/200" class="slide" width="400">
+      <img src="https://placekitten.com/g/300/200" class="slide" width="300">
+      <img src="https://placekitten.com/g/250/200" class="slide" width="250">
+      <img src="https://placekitten.com/g/200/200" class="slide" width="200">
+      <img src="https://placekitten.com/g/350/200" class="slide" width="350">
+      <img src="https://placekitten.com/g/150/200" class="slide" width="150">
+      <img src="https://placekitten.com/g/170/200" class="slide" width="170">
+      <img src="https://placekitten.com/g/420/200" class="slide" width="420">
+      <img src="https://placekitten.com/g/290/200" class="slide" width="290">
+      <img src="https://placekitten.com/g/320/200" class="slide" width="320">
+  </wc-carousel-lite>
+  <div class="mittari">
+    <div class="puolikas">
+    </div>
+  </div>
+
+  <div class="buttons">
+    <button onclick="func_prev(1,'karuselli_4')" class="button" type="button">Prev</button>
+    <button onclick="func_start_autoplay('karuselli_4')" class="button" type="button">Start autoplay</button>
+    <button onclick="func_stop_autoplay('karuselli_4')" class="button" type="button">Stop autoplay</button>
+    <button onclick="func_next(1,'karuselli_4')" class="button" type="button">Next</button>
+  </div>
+
+  <div class="space"></div>
+
+  <div id="footer">
+    All kitties on this page are from <a href="https://placekitten.com" target="_blank">placekitten.com</a>
+  </div>
+
+</body>
+</html>

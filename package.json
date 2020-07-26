@@ -1,0 +1,29 @@
+{
+  "name": "@vanillawc/wc-carousel-lite",
+  "version": "0.0.1",
+  "description": "A web component that wraps HTML elements and forms a horizontal carousel slider out of them.",
+  "main": "dist/wc-carousel-lite-node.min.js",
+  "files": [
+    "dist/wc-carousel-lite-node.min.js",
+    "dist/wc-carousel-lite-node.js",
+    "dist/minify.cmd"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanillawc/wc-carousel-lite.git"
+  },
+  "keywords": [
+    "web-component",
+    "custom-element",
+    "vanilla-web-component",
+    "html",
+    "javascript",
+    "carousel"
+  ],
+  "author": "Jussi Utunen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vanillawc/wc-carousel-lite/issues"
+  },
+  "homepage": "https://github.com/vanillawc/wc-carousel-lite#readme"
+}

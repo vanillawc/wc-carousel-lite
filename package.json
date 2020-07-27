@@ -22,6 +22,10 @@
   ],
   "author": "Jussi Utunen",
   "license": "MIT",
+  "scripts": {
+    "preversion": "",
+    "postversion": "git push --follow-tags"
+  },
   "bugs": {
     "url": "https://github.com/vanillawc/wc-carousel-lite/issues"
   },

@@ -1,3 +1,6 @@
+[![minified](https://badgen.net/badge/minified/6.8%20kB/blue)](https://badgen.net/badge/minified/6.8%20kB/blue)
+[![minified & compressed](https://badgen.net/badge/minified%20&%20compressed/2.4%20kB/blue)](https://badgen.net/badge/minified%20&%20compressed/2.4%20kB/blue)
+
 # wc-carousel-lite
 
 A web component that wraps HTML elements and forms a horizontal carousel slider out of them.
@@ -91,6 +94,48 @@ Component features include:
        <img src="https://placekitten.com/g/250/200" class="item" width="250">      
      </wc-carousel-lite>    
     ```
+
+## Including the component from NPM
+
+1. Install and import polyfill, this is not needed for modern browsers:
+
+   See https://www.npmjs.com/package/@webcomponents/custom-elements
+
+2. Install wc-menu-wrapper NPM package:
+
+    ```console
+    npm i @vanillawc/wc-carousel-lite
+    ```
+
+3. Import custom element:
+
+    ```javascript
+    import '@vanillawc/wc-carousel-lite'
+    ```
+
+4. Start using it:
+
+   ```javascript
+   let carousel = document.createElement("wc-carousel-lite");
+   carousel.transitionDuration = 1000;
+   carousel.infinite = true;
+   carousel.autoplay = true;
+   carousel.centerBetween = true;
+   
+   let img = document.createElement("img");
+   img.setAttribute("src", "./myimage_1.png");
+   img.setAttribute("width", 300);
+   img.classList.add("item");
+   carousel.appendChild(img);   
+   
+   let img_2 = document.createElement("img");
+   img_2.setAttribute("src", "./myimage_2.png");
+   img_2.setAttribute("width", 300);
+   img_2.classList.add("item");
+   carousel.appendChild(img_2);
+   
+   document.body.appendChild(carousel);
+   ```
 
 ## Attributes
 

@@ -381,7 +381,7 @@ To add / remove items dynamically, do the following:
 
 Default values are defined and modifiable in the custom element constructor.
 
-See file wc-carousel-lite.js in dist folder.
+See file *wc-carousel-lite.js* in *dist* folder.
 
 ```javascript
     this.item = "item";

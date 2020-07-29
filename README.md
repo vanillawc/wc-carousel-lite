@@ -412,9 +412,9 @@ See file *wc-carousel-lite.js* in *dist* folder.
     this.minShiftRequired = 30; // minimum x shift required to shift the item (pixels)
 ```
 
-Infinite, no-touch, center-between and autoplay are all disabled by default.
+Infinite, no-touch, center-between and autoplay are all disabled by default and not initialized in constructor at all.
 
-To enable them by default, add them to constructor:
+To enable them by default, add following lines to constructor:
 
 ```javascript
     this.infinite = true;

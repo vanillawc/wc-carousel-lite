@@ -1,4 +1,3 @@
-// Note: this.originalIndex is applicable only when this.infinite is truthy
 
 class Customcarousel extends HTMLElement {
   constructor() {
@@ -27,7 +26,8 @@ class Customcarousel extends HTMLElement {
       "direction",
       "transition-duration",
       "transition-type",
-      "item"
+      "item",
+      "no-touch"
     ];
   }
 
@@ -63,6 +63,8 @@ class Customcarousel extends HTMLElement {
       this.direction = newValue;
     } else if (name === "item") {
       this.item = newValue;
+    } else if (name === "no-touch") {
+      this.noTouch = true;
     }
   }
 
@@ -168,6 +170,7 @@ class Customcarousel extends HTMLElement {
     }
 
     let distance, distance_2;
+    // Note: this.originalIndex is applicable only when this.infinite is truthy
     distance = index - this.originalIndex;
 
     if (index > this.originalIndex) {
@@ -529,15 +532,19 @@ class Customcarousel extends HTMLElement {
 
     if (!this.isInitialized) {
       this.tabIndex = 0;
-      this.ontouchstart = this._downEventHandler;
-      this.ontouchstart = this.ontouchstart.bind(this);
 
-      this.ontouchend = this._upEventHandler;
-      this.ontouchend = this.ontouchend.bind(this);
-      /*
-      this.ontouchcancel = this._upEventHandler
-      this.ontouchcancel = this.ontouchcancel.bind(this)
-      */
+      if(!this.noTouch) {
+        this.ontouchstart = this._downEventHandler;
+        this.ontouchstart = this.ontouchstart.bind(this);
+
+        this.ontouchend = this._upEventHandler;
+        this.ontouchend = this.ontouchend.bind(this);
+        /*
+        this.ontouchcancel = this._upEventHandler
+        this.ontouchcancel = this.ontouchcancel.bind(this)
+        */
+      }
+
       this.onmousedown = this._downEventHandler;
       this.onmousedown = this.onmousedown.bind(this);
 

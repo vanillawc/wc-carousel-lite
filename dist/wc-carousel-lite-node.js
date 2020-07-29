@@ -26,7 +26,8 @@ export class Customcarousel extends HTMLElement {
       "direction",
       "transition-duration",
       "transition-type",
-      "item"
+      "item",
+      "no-touch"
     ];
   }
 
@@ -62,6 +63,8 @@ export class Customcarousel extends HTMLElement {
       this.direction = newValue;
     } else if (name === "item") {
       this.item = newValue;
+    } else if (name === "no-touch") {
+      this.noTouch = true;
     }
   }
 
@@ -529,15 +532,19 @@ export class Customcarousel extends HTMLElement {
 
     if (!this.isInitialized) {
       this.tabIndex = 0;
-      this.ontouchstart = this._downEventHandler;
-      this.ontouchstart = this.ontouchstart.bind(this);
 
-      this.ontouchend = this._upEventHandler;
-      this.ontouchend = this.ontouchend.bind(this);
-      /*
-      this.ontouchcancel = this._upEventHandler
-      this.ontouchcancel = this.ontouchcancel.bind(this)
-      */
+      if(!this.noTouch) {
+        this.ontouchstart = this._downEventHandler;
+        this.ontouchstart = this.ontouchstart.bind(this);
+
+        this.ontouchend = this._upEventHandler;
+        this.ontouchend = this.ontouchend.bind(this);
+        /*
+        this.ontouchcancel = this._upEventHandler
+        this.ontouchcancel = this.ontouchcancel.bind(this)
+        */
+      }
+
       this.onmousedown = this._downEventHandler;
       this.onmousedown = this.onmousedown.bind(this);
 

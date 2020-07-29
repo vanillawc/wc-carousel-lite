@@ -251,6 +251,20 @@ HTML example:
 <wc-carousel-lite direction='right'>
 ```
 
+### no-touch
+
+If defined, touch swiping is disabled.
+
+By default, touch swiping is enabled.
+
+This attribute is a boolean attribute, also known as a valueless attribute.
+
+HTML example:
+
+```html
+<wc-carousel-lite no-touch>
+```
+
 ### item
 
 Defines new item class name, if the default class name 'item' can not be used.
@@ -297,6 +311,8 @@ This attribute can't be assigned as an HTML attribute.
 
 *initItem* and *infinite* attributes should be set only when the carousel is not appended to DOM.
 
+*noTouch* value can't be changed once the carousel is appended to DOM.
+
 Example:
 
    ```javascript
@@ -313,6 +329,7 @@ Example:
    carousel.touchVelocityLimit = 1;
    carousel.mouseVelocityLimit = 2;
    carousel.minShiftRequired = 20;
+   carousel.noTouch = true;
 
    // Add items:
    let img = document.createElement("img");
@@ -393,6 +410,17 @@ See file *wc-carousel-lite.js* in *dist* folder.
     this.touchVelocityLimit = 1.5; // pixels per millisecond
     this.mouseVelocityLimit = 3.0; // pixels per millisecond
     this.minShiftRequired = 30; // minimum x shift required to shift the item (pixels)
+```
+
+Infinite, no-touch, center-between and autoplay are all disabled by default.
+
+To enable them by default, add them to constructor:
+
+```javascript
+    this.infinite = true;
+    this.noTouch = true;
+    this.centerBetween = true;
+    this.autoplay = true;
 ```
 
 ## Building

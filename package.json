@@ -1,6 +1,6 @@
 {
   "name": "@vanillawc/wc-carousel-lite",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A web component that wraps HTML elements and forms a horizontal carousel slider out of them.",
   "main": "dist/wc-carousel-lite-node.min.js",
   "files": [

@@ -496,6 +496,7 @@ class Customcarousel extends HTMLElement {
       this.sliderContainer = this.appendChild(document.createElement("div"));
       this.sliderContainer.style.display = "flex";
       this.sliderContainer.style.overflow = "hidden";
+      this.sliderContainer.style.width = "100%";
       this.itemsContainer = this.sliderContainer.appendChild(document.createElement("div"));
       this.itemsContainer.style.display = "flex";
       this.itemsContainer.style.position = "relative";

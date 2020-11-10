@@ -5,7 +5,7 @@
 
 A web component that wraps HTML elements and forms a horizontal carousel slider out of them.
 
-Live demo available [here.](http://51.38.51.120/wc-carousel-lite/)
+Live demo available [here.](http://135.181.40.67/wc-carousel-lite/)
 
 ## Features
 Wc-carousel-lite is a standalone vanilla JS web component that does not use shadow DOM.

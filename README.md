@@ -1,5 +1,12 @@
-[![minified](https://badgen.net/badge/minified/6.8%20kB/blue)](https://badgen.net/badge/minified/6.8%20kB/blue)
-[![minified & compressed](https://badgen.net/badge/minified%20&%20compressed/2.4%20kB/blue)](https://badgen.net/badge/minified%20&%20compressed/2.4%20kB/blue)
+<div align="center">
+  <a href="https://github.com/vanillawc/wc-carousel-lite/releases"><img src="https://badgen.net/github/tag/vanillawc/wc-carousel-lite" alt="GitHub Releases"></a>
+  <a href="https://www.npmjs.com/package/@vanillawc/wc-carousel-lite"><img src="https://badgen.net/npm/v/@vanillawc/wc-carousel-lite" alt="NPM Releases"></a>
+  <a href="https://bundlephobia.com/result?p=@vanillawc/wc-carousel-lite"><img src="https://badgen.net/bundlephobia/minzip/@vanillawc/wc-carousel-lite" alt="Bundlephobia"></a>
+  <a href="https://github.com/vanillawc/wc-carousel-lite/actions"><img src="https://github.com/vanillawc/wc-carousel-lite/workflows/Latest/badge.svg" alt="Latest Status"></a>
+  <a href="https://github.com/vanillawc/wc-carousel-lite/actions"><img src="https://github.com/vanillawc/wc-carousel-lite/workflows/Release/badge.svg" alt="Release Status"></a>
+
+  <a href="https://discord.gg/aSWYgtybzV"><img alt="Discord" src="https://img.shields.io/discord/723296249121603604?color=%23738ADB"></a>
+</div>
 
 # wc-carousel-lite
 
